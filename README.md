@@ -7,7 +7,7 @@
 
 
 ## Introduction
-I'm trying to predict the ordinal variable "damage_grade", which represents a level of damage to the building that was hit by the earthquake. There are 3 grades of the damage:
+I'm trying to predict the ordinal variable "damage_grade", which represents a level of damage to the building that was hit by the earthquake caused by the 2015 Gorkha earthquake in Nepal. There are 3 grades of the damage:
 
 1 represents low damage
 2 represents a medium amount of damage
