@@ -1,9 +1,9 @@
 # Modeling Earthquake Damage
 
 
-![picture1]()
+![picture1](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/adli-wahid-qMU6rlIhqOE-unsplash.jpg)
 
-*Intro Picture Source: photographer, unsplash.com*
+*Earthquake distruction in Nepal - can the data help prevent disaster? Picture Source: Adli Wahid, unsplash.com*
 
 
 ## Introduction
@@ -26,9 +26,9 @@ I'm trying to predict the ordinal variable "damage_grade", which represents a le
 * Built With, Contributors, Authors, Acknowledgments
 
 
-![picture2]()
+![picture2](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/kalle-kortelainen-6F-uGWod7Xk-unsplash.jpg)
 
-*. Source: , Unsplash.com*
+*A picture of one village in the mountains and how the buildings look. Source: Kalle Kortelainen, Unsplash.com*
 
 
 ## Repo Contents
@@ -102,18 +102,18 @@ Columns
 ## Conclusions
 
 
-![Picture3]()
+![Picture3](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/damage_bar_plot.png)
 
-**
+*Dealing with an imbalanced dataset!*
 
 
 ## Future Work
 
 
 
-![Picture4]()
+![Picture4](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/m_mani_earthquake-in-pakistan.jpg)
 
-* ! Source: , unsplash.com*
+*What the descruction of an earthquake can do to a building - but is it just any building? Source: M Mani, freeimages.com*
 
 
 ## Built With:
