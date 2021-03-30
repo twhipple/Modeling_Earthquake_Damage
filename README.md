@@ -13,6 +13,10 @@ I'm trying to predict the ordinal variable "damage_grade", which represents a le
 2 represents a medium amount of damage
 3 represents almost complete destruction
 
+We are predicting the level of damage from 1 to 3. The level of damage is an ordinal variable meaning that ordering is important. This can be viewed as a classification or an ordinal regression problem. (Ordinal regression is sometimes described as an problem somewhere in between classification and regression.)
+
+To measure the performance of our algorithms, we'll use the F1 score which balances the precision and recall of a classifier.
+
 
 ## README Outline
 * Introduction 
@@ -41,7 +45,6 @@ This repo contains the following:
 * Images - contains the fun images to this repo.
 
 
-
 ## Libraries & Prerequisites
 These are the libraries that I used in this project.
 
@@ -51,6 +54,14 @@ These are the libraries that I used in this project.
 * %matplotlib inline
 * import seaborn as sns
 
+## Import Metrics
+* from sklearn.metrics import (accuracy_score, f1_score, confusion_matrix, classification_report, confusion_matrix)
+                            
+## Import Models
+* from sklearn.neighbors import KNeighborsClassifier
+* from sklearn.ensemble import RandomForestClassifier
+* from sklearn.linear_model import LogisticRegression
+* from sklearn.svm import SVR            
 
 
 ## Features
@@ -96,10 +107,14 @@ Columns
 
 
 ## Models
-
+- KNeighbors Classifier
+- Random Forest Classifier
+- Logistic Regression
+- Support Vector Regression
 
 
 ## Conclusions
+My base model where I excluded all of the non-linear features with very little cleaning other than the Min/Max Scaler worked best with the Random Forest and returned an accuracy score of 72%. I couldn't get all of the models to run, probably because of the imbalanced dataset with I need to attempt to deal with, along with adding in the non-continuous features.
 
 
 ![Picture3](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/damage_bar_plot.png)
@@ -108,7 +123,7 @@ Columns
 
 
 ## Future Work
-
+I'm curious about what other factors could be taken into account. And can more work be done looking at historic buildings and placement in relation to the center of the earthquake.
 
 
 ![Picture4](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/m_mani_earthquake-in-pakistan.jpg)
