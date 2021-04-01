@@ -106,29 +106,40 @@ Columns
 * has_secondary_use_other (type: binary): flag variable that indicates if the building was secondarily used for other purposes.
 
 
-## Models
-- KNeighbors Classifier
-- Random Forest Classifier
-- Logistic Regression
-- Support Vector Regression
-
-
-## Conclusions
-My base model where I excluded all of the non-linear features with very little cleaning other than the Min/Max Scaler worked best with the Random Forest and returned an accuracy score of 72%. I couldn't get all of the models to run, probably because of the imbalanced dataset with I need to attempt to deal with, along with adding in the non-continuous features.
-
-
 ![Picture3](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/damage_bar_plot.png)
 
 *Dealing with an imbalanced dataset!*
 
 
+## Models
+- KNeighbors Classifier
+- Random Forest Classifier
+- Logistic Regression
+- Support Vector Regression
+- Support Vector Classifier
+- XGBoost
+
+
+## Conclusions
+My base model where I excluded all of the non-linear features with very little cleaning other than the Min/Max Scaler worked best with the Random Forest and returned an accuracy score of 72%. I couldn't get all of the models to run, probably because of the imbalanced dataset with I need to attempt to deal with, along with adding in the non-continuous features.
+
+Then I created a balanced dataset where all three of the target variables of damage_grade had the same number of rows using up-sampling and down-sampling. Unfortunately, this just gave me a better training score but lowered my accuracy for the test group - probably resulting in over-fitting. The score for the forest model returned an f1_score of 78% but with the actual test group the score was 68%.
+
+I tried a third time with XGB and the Standard Scalar (even though there didn't seem to be any difference between the Min/Max Scalar and the Standard Scalar on the Random Forest Model). This time the model did slightly better for the submission but still not great - 73%, which was actually better than my own testing score.
+
+
+![Picture4](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/damage_bar_plot.png)
+
+*Dealing with an imbalanced dataset!*
+
+
 ## Future Work
-I'm curious about what other factors could be taken into account. And can more work be done looking at historic buildings and placement in relation to the center of the earthquake.
+I'm curious about what other factors could be taken into account when looking at earthquake disasters (such as number of earthquakes per year, average Richter score, and how this specific earthquake came about - tectonic plate movement, volcanic eruption, or tsunami). And can more work be done looking at historic buildings and placement in relation to the center of the earthquake.
 
 
-![Picture4](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/m_mani_earthquake-in-pakistan.jpg)
+![Picture5](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/earthquake_xgb_submission_3.png)
 
-*What the descruction of an earthquake can do to a building - but is it just any building? Source: M Mani, freeimages.com*
+*My third submission using Standard Scalar and XGBoost on the unbalanced dataset and only continuous variables.*
 
 
 ## Built With:
