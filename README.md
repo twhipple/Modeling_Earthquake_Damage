@@ -127,6 +127,8 @@ Then I created a balanced dataset where all three of the target variables of dam
 
 I tried a third time with XGB and the Standard Scalar (even though there didn't seem to be any difference between the Min/Max Scalar and the Standard Scalar on the Random Forest Model). This time the model did slightly better for the submission but still not great - 73%, which was actually better than my own testing score.
 
+Finally I tried using get_dummies to include all of the categorical columns. Though not only did this add a lot of columns it didn't improve the score - so in the end I left it out. Considering the leader of the board had only a score of 0.7560 I feel like I was pretty close!
+
 
 ![Picture4](https://raw.githubusercontent.com/twhipple/Modeling_Earthquake_Damage/main/Images/damage_bar_plot.png)
 
@@ -134,6 +136,8 @@ I tried a third time with XGB and the Standard Scalar (even though there didn't 
 
 
 ## Future Work
+I still would like to know more about dealing with the unbalanced data set as well as all the categorical columns. Plus, I need to do some hypertuning of parameters and take a closer look at the feature importance. Perhaps I can build a faster and lighter model based on only a handful of columns.
+
 I'm curious about what other factors could be taken into account when looking at earthquake disasters (such as number of earthquakes per year, average Richter score, and how this specific earthquake came about - tectonic plate movement, volcanic eruption, or tsunami). And can more work be done looking at historic buildings and placement in relation to the center of the earthquake.
 
 
